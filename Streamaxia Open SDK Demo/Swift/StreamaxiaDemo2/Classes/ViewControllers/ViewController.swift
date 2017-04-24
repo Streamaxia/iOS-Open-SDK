@@ -133,7 +133,7 @@ fileprivate extension ViewController {
         let settings = AXRecorderSettings.init()
         
         settings.videoFrameResolution = .standard720p
-        settings.videoBitrate = utils.minBitrate(for: settings.videoFrameResolution)
+        settings.videoBitrate = utils.bitrate(for: settings.videoFrameResolution)
         settings.keyFrameInterval = Int(0.5 * Double(settings.frameRate))
         
         return settings
