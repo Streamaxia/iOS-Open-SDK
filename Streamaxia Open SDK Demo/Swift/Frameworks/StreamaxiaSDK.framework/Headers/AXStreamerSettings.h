@@ -38,4 +38,12 @@
  */
 - (void)setLocalSave:(BOOL)enabled withError:(AXError **)error;
 
+/**
+ Method used to set adaptive bitrate for the stream
+
+ @param adaptiveBitrate Boolean used to enable/disable adaptive bitrate
+ @param error Output error. It will be set if the setting could not be set.
+ */
+- (void)setAdaptiveBitrate:(BOOL)adaptiveBitrate withError:(AXError **)error;
+
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385EE0201EAE022600148DDB /* ag-streamer-sdk.config in Resources */ = {isa = PBXBuildFile; fileRef = 385EE01D1EAE022600148DDB /* ag-streamer-sdk.config */; };
+		385EE0211EAE022600148DDB /* ag-streamer-sdk.key in Resources */ = {isa = PBXBuildFile; fileRef = 385EE01E1EAE022600148DDB /* ag-streamer-sdk.key */; };
+		385EE0221EAE022600148DDB /* ag-streamer-sdk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 385EE01F1EAE022600148DDB /* ag-streamer-sdk.txt */; };
 		3E7F95A81D93DCC400867621 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F959D1D93DCC400867621 /* AppDelegate.m */; };
 		3E7F95A91D93DCC400867621 /* AGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F95A01D93DCC400867621 /* AGViewController.m */; };
 		3E7F95AD1D93DCC400867621 /* demo-certificate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F95A71D93DCC400867621 /* demo-certificate.bundle */; };
@@ -33,6 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		385EE01D1EAE022600148DDB /* ag-streamer-sdk.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ag-streamer-sdk.config"; sourceTree = "<group>"; };
+		385EE01E1EAE022600148DDB /* ag-streamer-sdk.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.key"; sourceTree = "<group>"; };
+		385EE01F1EAE022600148DDB /* ag-streamer-sdk.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.txt"; sourceTree = "<group>"; };
 		3E7F959C1D93DCC400867621 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E7F959D1D93DCC400867621 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3E7F959F1D93DCC400867621 /* AGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGViewController.h; sourceTree = "<group>"; };
@@ -59,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		385EE01C1EAE022600148DDB /* demo-certificate */ = {
+			isa = PBXGroup;
+			children = (
+				385EE01D1EAE022600148DDB /* ag-streamer-sdk.config */,
+				385EE01E1EAE022600148DDB /* ag-streamer-sdk.key */,
+				385EE01F1EAE022600148DDB /* ag-streamer-sdk.txt */,
+			);
+			path = "demo-certificate";
+			sourceTree = "<group>";
+		};
 		3E7F959A1D93DCC400867621 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +113,7 @@
 		3E7F95A21D93DCC400867621 /* Streamaxia */ = {
 			isa = PBXGroup;
 			children = (
+				385EE01C1EAE022600148DDB /* demo-certificate */,
 				3E7F95A71D93DCC400867621 /* demo-certificate.bundle */,
 			);
 			path = Streamaxia;
@@ -218,8 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7F95AD1D93DCC400867621 /* demo-certificate.bundle in Resources */,
+				385EE0201EAE022600148DDB /* ag-streamer-sdk.config in Resources */,
 				3EBD23FF1D928CA000785BAF /* LaunchScreen.storyboard in Resources */,
+				385EE0211EAE022600148DDB /* ag-streamer-sdk.key in Resources */,
 				3EBD23FC1D928CA000785BAF /* Assets.xcassets in Resources */,
+				385EE0221EAE022600148DDB /* ag-streamer-sdk.txt in Resources */,
 				3EBD23FA1D928CA000785BAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

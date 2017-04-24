@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		385EE0191EAE020400148DDB /* ag-streamer-sdk.config in Resources */ = {isa = PBXBuildFile; fileRef = 385EE0161EAE020400148DDB /* ag-streamer-sdk.config */; };
+		385EE01A1EAE020400148DDB /* ag-streamer-sdk.key in Resources */ = {isa = PBXBuildFile; fileRef = 385EE0171EAE020400148DDB /* ag-streamer-sdk.key */; };
+		385EE01B1EAE020400148DDB /* ag-streamer-sdk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 385EE0181EAE020400148DDB /* ag-streamer-sdk.txt */; };
+		3E7F95BD1D93F43E00867621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F95B31D93F43E00867621 /* AppDelegate.swift */; };
+		3E7F95BE1D93F43E00867621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F95B51D93F43E00867621 /* ViewController.swift */; };
+		3E7F95C21D93F43E00867621 /* demo-certificate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F95BC1D93F43E00867621 /* demo-certificate.bundle */; };
+		3EBD24181D928CD900785BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD24161D928CD900785BAF /* Main.storyboard */; };
+		3EBD241A1D928CD900785BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD24191D928CD900785BAF /* Assets.xcassets */; };
+		3EBD241D1D928CD900785BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD241B1D928CD900785BAF /* LaunchScreen.storyboard */; };
+		3EBD25961D92E13600785BAF /* StreamaxiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */; };
+		3EBD25971D92E13600785BAF /* StreamaxiaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3EBD25981D92E13600785BAF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3EBD25971D92E13600785BAF /* StreamaxiaSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		385EE0161EAE020400148DDB /* ag-streamer-sdk.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ag-streamer-sdk.config"; sourceTree = "<group>"; };
+		385EE0171EAE020400148DDB /* ag-streamer-sdk.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.key"; sourceTree = "<group>"; };
+		385EE0181EAE020400148DDB /* ag-streamer-sdk.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.txt"; sourceTree = "<group>"; };
+		3E7F95B31D93F43E00867621 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E7F95B51D93F43E00867621 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E7F95BC1D93F43E00867621 /* demo-certificate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "demo-certificate.bundle"; sourceTree = "<group>"; };
+		3EBD240F1D928CD900785BAF /* StreamaxiaDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamaxiaDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EBD24171D928CD900785BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EBD24191D928CD900785BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EBD241C1D928CD900785BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3EBD241E1D928CD900785BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StreamaxiaSDK.framework; path = Frameworks/StreamaxiaSDK.framework; sourceTree = "<group>"; };
+		3EBD25921D92DEB100785BAF /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EBD240C1D928CD900785BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EBD25961D92E13600785BAF /* StreamaxiaSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		385EE0151EAE020400148DDB /* demo-certificate */ = {
+			isa = PBXGroup;
+			children = (
+				385EE0161EAE020400148DDB /* ag-streamer-sdk.config */,
+				385EE0171EAE020400148DDB /* ag-streamer-sdk.key */,
+				385EE0181EAE020400148DDB /* ag-streamer-sdk.txt */,
+			);
+			path = "demo-certificate";
+			sourceTree = "<group>";
+		};
+		3E7F95AF1D93F41E00867621 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD24161D928CD900785BAF /* Main.storyboard */,
+				3EBD241B1D928CD900785BAF /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3E7F95B01D93F42F00867621 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD241E1D928CD900785BAF /* Info.plist */,
+				3EBD25921D92DEB100785BAF /* Swift-Bridging-Header.h */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		3E7F95B11D93F43E00867621 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F95B21D93F43E00867621 /* AppDelegate */,
+				3E7F95B41D93F43E00867621 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3E7F95B21D93F43E00867621 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F95B31D93F43E00867621 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3E7F95B41D93F43E00867621 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F95B51D93F43E00867621 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3E7F95B61D93F43E00867621 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F95B71D93F43E00867621 /* Streamaxia */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3E7F95B71D93F43E00867621 /* Streamaxia */ = {
+			isa = PBXGroup;
+			children = (
+				385EE0151EAE020400148DDB /* demo-certificate */,
+				3E7F95BC1D93F43E00867621 /* demo-certificate.bundle */,
+			);
+			path = Streamaxia;
+			sourceTree = "<group>";
+		};
+		3EBD24061D928CD900785BAF = {
+			isa = PBXGroup;
+			children = (
+				3EBD24111D928CD900785BAF /* StreamaxiaDemo2 */,
+				3EBD25901D92DCED00785BAF /* Frameworks */,
+				3EBD24101D928CD900785BAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EBD24101D928CD900785BAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD240F1D928CD900785BAF /* StreamaxiaDemo2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EBD24111D928CD900785BAF /* StreamaxiaDemo2 */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD24191D928CD900785BAF /* Assets.xcassets */,
+				3E7F95B11D93F43E00867621 /* Classes */,
+				3E7F95B61D93F43E00867621 /* Resources */,
+				3E7F95AF1D93F41E00867621 /* Storyboards */,
+				3E7F95B01D93F42F00867621 /* Support */,
+			);
+			path = StreamaxiaDemo2;
+			sourceTree = "<group>";
+		};
+		3EBD25901D92DCED00785BAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EBD240E1D928CD900785BAF /* StreamaxiaDemo2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EBD24211D928CD900785BAF /* Build configuration list for PBXNativeTarget "StreamaxiaDemo2" */;
+			buildPhases = (
+				3EBD240B1D928CD900785BAF /* Sources */,
+				3EBD240C1D928CD900785BAF /* Frameworks */,
+				3EBD240D1D928CD900785BAF /* Resources */,
+				3EBD25981D92E13600785BAF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreamaxiaDemo2;
+			productName = StreamaxiaDemo2;
+			productReference = 3EBD240F1D928CD900785BAF /* StreamaxiaDemo2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EBD24071D928CD900785BAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Agilio;
+				TargetAttributes = {
+					3EBD240E1D928CD900785BAF = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 32MK5V2NGT;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3EBD240A1D928CD900785BAF /* Build configuration list for PBXProject "StreamaxiaDemo2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EBD24061D928CD900785BAF;
+			productRefGroup = 3EBD24101D928CD900785BAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EBD240E1D928CD900785BAF /* StreamaxiaDemo2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EBD240D1D928CD900785BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F95C21D93F43E00867621 /* demo-certificate.bundle in Resources */,
+				385EE0191EAE020400148DDB /* ag-streamer-sdk.config in Resources */,
+				3EBD241D1D928CD900785BAF /* LaunchScreen.storyboard in Resources */,
+				385EE01A1EAE020400148DDB /* ag-streamer-sdk.key in Resources */,
+				3EBD241A1D928CD900785BAF /* Assets.xcassets in Resources */,
+				385EE01B1EAE020400148DDB /* ag-streamer-sdk.txt in Resources */,
+				3EBD24181D928CD900785BAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EBD240B1D928CD900785BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F95BE1D93F43E00867621 /* ViewController.swift in Sources */,
+				3E7F95BD1D93F43E00867621 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3EBD24161D928CD900785BAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EBD24171D928CD900785BAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3EBD241B1D928CD900785BAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EBD241C1D928CD900785BAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EBD241F1D928CD900785BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EBD24201D928CD900785BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EBD24221D928CD900785BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 32MK5V2NGT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = StreamaxiaDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StreamaxiaDemo2/Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3EBD24231D928CD900785BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 32MK5V2NGT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = StreamaxiaDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StreamaxiaDemo2/Swift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EBD240A1D928CD900785BAF /* Build configuration list for PBXProject "StreamaxiaDemo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EBD241F1D928CD900785BAF /* Debug */,
+				3EBD24201D928CD900785BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EBD24211D928CD900785BAF /* Build configuration list for PBXNativeTarget "StreamaxiaDemo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EBD24221D928CD900785BAF /* Debug */,
+				3EBD24231D928CD900785BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EBD24071D928CD900785BAF /* Project object */;
+}

@@ -53,6 +53,9 @@ typedef NS_ENUM(NSInteger, AXErrorCode) {
     AXErrorCodeRTMPConnectionFailure = 80001,
     AXErrorCodeLocalSaveFailure = 90001,
     AXErrorPostToPhotosFailure = 100001,
+    AXErrorPhotosAccessError,
+    
+    AXErrorMediaLibraryAccessError = 101001,
     
     AXErrorKeychainAccessFailure = 110001,
     AXErrorStreamLimitReached = 120001

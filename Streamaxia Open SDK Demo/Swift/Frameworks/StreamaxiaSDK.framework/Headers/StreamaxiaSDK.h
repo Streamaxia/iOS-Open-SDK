@@ -58,6 +58,19 @@ FOUNDATION_EXPORT const unsigned char StreamaxiaSDKVersionString[];
 #import <StreamaxiaSDK/AXRecorder+ExtraFeatures.h>
 
 /*****************************************
+ * The Streamer
+ *****************************************/
+
+#import <StreamaxiaSDK/AXStreamer.h>
+#import <StreamaxiaSDK/AXStreamerSettings.h>
+#import <StreamaxiaSDK/AXStreamerVideoSettings.h>
+#import <StreamaxiaSDK/AXStreamerAudioSettings.h>
+
+#import <StreamaxiaSDK/AXFileInputSource.h>
+#import <StreamaxiaSDK/AXMediaFetcher.h>
+#import <StreamaxiaSDK/AXMovie.h>
+
+/*****************************************
  * SDK Utils
  *****************************************/
 
