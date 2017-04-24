@@ -17,7 +17,7 @@
 /// ----------------------------------------
 
 /**
- Change and apply the stream info.
+ Change and apply the stream info. The recorder holds the initial stream source (which is created internally when the recorder is started). When calling this method the old stream source is replaced by a new one.
  This is not allowed while streaming.
 
  @param streamInfo      The stream info.

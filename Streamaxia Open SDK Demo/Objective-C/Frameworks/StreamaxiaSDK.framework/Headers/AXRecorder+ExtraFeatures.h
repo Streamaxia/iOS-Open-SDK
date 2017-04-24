@@ -50,10 +50,24 @@ Starts the adaptive bitrate service. If a constant bit rates were set they are i
  */
 - (void)deactivateFeatureSaveLocallyWithError:(AXError **)error;
 
+/**
+ List of stream sources that are currently managed by the recorder. A stream source is created internally when the recorder is started. Extra stream sources can be added by calling - (AXStreamSource *)addStreamingSourceWithInfo:(AXStreamInfo *)streamInfo. By default when a stream source is added it does NOT start streaming. To start streaming to that source you must set the on property to YES.
+ */
 @property (nonatomic, readonly) NSArray<AXStreamSource *> *streamSources;
 
+/**
+ Add a new stream source with the given info. Adding a source with an invalid info might result in an invalid stream source. Adding two sources with the same URL is an error and the behaviour is undefined. Stream sources can be added/removed dynamically at any point during streaming.
+ 
+  @param streamInfo The stream info to be used to create the stream source.
+  @return The stream source that is now managed by the recorder. You can set the delegate property to receive messages from the source and you can start the streaming on that source by setting the on property to YES.
+ */
 - (AXStreamSource *)addStreamingSourceWithInfo:(AXStreamInfo *)streamInfo;
 
+/**
+ Remove a stream source from the recorder. After calling this method the stream source is not managed by the recorder anymore and it can't be used for streaming.
+ 
+ @param streamSource The stream source to be removed.
+ */
 - (void)removeStreamingSourceWithInfo:(AXStreamSource *)streamSource;
 
 @end
