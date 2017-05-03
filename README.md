@@ -17,7 +17,7 @@ This is a short programming guide about how to test Streamaxia OpenSDK library u
 NSString * const kStreamaxiaStreamName = @"YOUR-STREAM-NAME-HERE";
 ```
 Build and run the project. You can view your broadcast at the following url: http://play.streamaxia.com/streamaxia/yourStreamName  
-Note: You have to run the project on a physical device, because streaming is not possible from the simulator
+Note: You have to build and run the project on a physical device, because streaming is not possible from the simulator
 
 For more information about the Streamaxia Open SDK set up please check [Streamaxia iOS Open SDK Setup Guide](files/OpenSDK_iOS_3.2.pdf)
 
