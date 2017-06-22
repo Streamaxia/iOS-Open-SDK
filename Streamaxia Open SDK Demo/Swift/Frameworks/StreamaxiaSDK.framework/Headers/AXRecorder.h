@@ -8,6 +8,7 @@
 
 @import Foundation;
 @import UIKit;
+@import AVFoundation;
 
 #import "AXSDKDefines.h"
 #import "AXReachability.h"
@@ -213,5 +214,14 @@ typedef NS_ENUM(NSInteger, AXRecorderState) {
  @param status   The new network status.
  */
 - (void)recorder:(AXRecorder *)recorder didChangeNetworkStatus:(AXNetworkStatus)status;
+
+/**
+ It's called when a sample buffer was output from the recorder.
+
+ @param recorder The recorder
+ @param sampleBuffer The sample buffer
+ @param captureOutput The capture output
+ */
+- (void)recorder:(AXRecorder *)recorder didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromCaptureOutput:(AVCaptureOutput *)captureOutput;
 
 @end
