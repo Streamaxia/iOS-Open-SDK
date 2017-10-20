@@ -3,24 +3,23 @@
 ==================================================
 ****** General info ******
 ==================================================
->>> COMPANY: -------------- [STREAMAXIA] 
->>> AUTHOR: --------------- [VLAD] 
->>> AUTHOR CONTACT: ------- [http://STREAMAXIA.COM] 
->>> CLIENT: --------------- [STREAMAXIA] 
->>> CLIENT CONTACT: ------- [contact@streamaxia.com ] 
+>>> COMPANY: -------------- [Streamaxia] 
+>>> AUTHOR: --------------- [Streamaxia] 
+>>> AUTHOR CONTACT: ------- [http://www.streamaxia.com/contact-us/] 
+>>> CLIENT: --------------- [FreeDeveloper] 
+>>> CLIENT CONTACT: ------- [contact@streamaxia.com] 
 ==================================================
 ****** SDK Settings ******
 ==================================================
->>> START DATE: --------------------------- [29 March 2017] 
->>> EXPIRATION DATE: ---------------------- [29 April 2018] 
->>> VALID FOR: ---------------------------- [396] DAYS 
+>>> START DATE: --------------------------- [20 October 2017] 
+>>> EXPIRATION DATE: ---------------------- [08 May 2018] 
+>>> VALID FOR: ---------------------------- [200] DAYS 
 >>> IS LOCKED ON CERTAIN BUNDLE IDs: ------ [YES] 
->>> HAS LIMITED STREAMING TIME: ------ [1 HOURS] 
+>>> HAS LIMITED STREAMING TIME: ------ [2 HOURS] 
 ==================================================
 ****** Locked on the following bundle IDs ******
 ==================================================
->>> [1] com.streamaxia.obj-c.demo 
->>> [2] com.streamaxia.swift.demo 
+>>> [1] com.streamaxia.swift.demo 
 ==================================================
 ****** Active features ******
 ==================================================
