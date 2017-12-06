@@ -94,6 +94,11 @@
  */
 @property (nonatomic, assign, readonly) AXVideoFrameSize videoFrameSize;
 
+/**
+ *  Default is NO. Set to YES if you need to customize the audio session.
+ */
+@property (nonatomic, assign) BOOL configureAudioSessionManually;
+
 /// ----------------------------------------
 /// @name Lifecycle
 /// ----------------------------------------
