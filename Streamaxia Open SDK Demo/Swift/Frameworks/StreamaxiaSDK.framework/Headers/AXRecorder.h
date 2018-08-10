@@ -149,6 +149,11 @@ typedef NS_ENUM(NSInteger, AXRecorderState) {
  */
 - (void)stopStreaming;
 
+/**
+ Call this method to end the capture session. Make sure to ALWAYS call this method before releasing the Record object
+ */
+- (void)endSession;
+
 @end
 
 /**
