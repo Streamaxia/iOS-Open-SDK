@@ -1,0 +1,42 @@
+==================================================
+****** RTMP STREAMER CERTIFICATE ******
+==================================================
+****** General info ******
+==================================================
+>>> COMPANY: -------------- [Streamaxia] 
+>>> AUTHOR: --------------- [Streamaxia] 
+>>> AUTHOR CONTACT: ------- [http://www.streamaxia.com/contact-us/] 
+>>> CLIENT: --------------- [FreeDeveloper] 
+>>> CLIENT CONTACT: ------- [contact@streamaxia.com] 
+==================================================
+****** SDK Settings ******
+==================================================
+>>> START DATE: --------------------------- [21 May 2018] 
+>>> EXPIRATION DATE: ---------------------- [21 May 2019] 
+>>> VALID FOR: ---------------------------- [365] DAYS 
+>>> IS LOCKED ON CERTAIN BUNDLE IDs: ------ [YES] 
+>>> HAS LIMITED STREAMING TIME: ------ [20 HOURS] 
+==================================================
+****** Locked on the following bundle IDs ******
+==================================================
+>>> [1] com.streamaxia.swift.demo 
+>>> [2] com.streamaxia.obj-c.demo 
+==================================================
+****** Active features ******
+==================================================
+>>> [1] Adaptive Bit Rate 
+----------------------------------------
+Manage automatically the streaming bit rate, according to available bandwidth.
+----------------------------------------
+
+>>> [2] Save Video Locally 
+----------------------------------------
+The streamed video is saved on the device's local memory.
+----------------------------------------
+
+>>> [3] Tap To Focus 
+----------------------------------------
+Tap to focus the camera during streaming.
+----------------------------------------
+
+==================================================
