@@ -200,6 +200,15 @@ fileprivate extension ViewController {
                 print("*** ERROR activating feature save locally: \(error!.message)")
             }
             
+            // Enable tap to focus
+            // The focus and exposure will be adjusted based on your selection
+            recorder.activateFeatureTapToFocus { (success, error) in
+                guard success else {
+                    print("*** ERROR activating feature tap to focus: \(error!.message)")
+                    return
+                }
+            }
+            
             self.recorder = recorder
         }
         

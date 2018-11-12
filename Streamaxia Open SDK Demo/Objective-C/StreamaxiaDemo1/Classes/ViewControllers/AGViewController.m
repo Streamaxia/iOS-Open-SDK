@@ -174,6 +174,13 @@ const NSInteger kAGStreamerVCStopButtonTag = 1;
         NSLog(@"*** ERROR activating feature save locally: %@",error.message);
         error = nil;
     }
+    
+    [self.recorder activateFeatureTapToFocusWithCompletion:^(BOOL success, AXError *error) {
+        if (!success) {
+            NSLog(@"*** ERROR activating feature tap to facus: %@",error.message);
+            error = nil;
+        }
+    }];
 }
 
 - (void)updateLabelWithTime:(NSTimeInterval)time {

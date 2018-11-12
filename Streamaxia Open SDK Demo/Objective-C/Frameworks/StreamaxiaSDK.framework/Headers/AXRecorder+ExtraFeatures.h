@@ -51,6 +51,16 @@ Starts the adaptive bitrate service. If a constant bit rates were set they are i
 - (void)deactivateFeatureSaveLocallyWithError:(AXError **)error;
 
 /**
+ Active the tap to focus feature. The activation must be made after the sdk was successfully configured.
+ */
+- (void)activateFeatureTapToFocusWithCompletion:(void (^)(BOOL success, AXError *error))completionBlock;
+
+/**
+ Deactivate the tap to focus feature.
+ */
+- (void)deactivateFeatureTapToFocus;
+
+/**
  List of stream sources that are currently managed by the recorder. A stream source is created internally when the recorder is started. Extra stream sources can be added by calling - (AXStreamSource *)addStreamingSourceWithInfo:(AXStreamInfo *)streamInfo. By default when a stream source is added it does NOT start streaming. To start streaming to that source you must set the on property to YES.
  */
 @property (nonatomic, readonly) NSArray<AXStreamSource *> *streamSources;
