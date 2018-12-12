@@ -109,6 +109,12 @@ const NSInteger kAGStreamerVCStopButtonTag = 1;
 
 #pragma mark - Private methods
 
+- (void)takeSnapshot {
+    [self.recorder takeSnapshotWithCompletion:^(UIImage *snapshot, AXError *error) {
+        // do something with the image
+    }];
+}
+
 - (void)setupStreamaxiaSDK {
     __weak typeof(self) weakSelf = self;
     AXStreamaxiaSDK *sdk = [AXStreamaxiaSDK sharedInstance];
@@ -318,6 +324,10 @@ const NSInteger kAGStreamerVCStopButtonTag = 1;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     weakSelf.startButton.tag = kAGStreamerVCStopButtonTag;
                     [weakSelf.startButton setTitle:@"Stop" forState:UIControlStateNormal];
+                });
+                
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self takeSnapshot];
                 });
             } else {
                 NSLog(@"*** DEMO *** Error: %@", error);

@@ -91,6 +91,10 @@ class ViewController: UIViewController {
                         self.startButton.tag = self.kStopButtonTag
                         self.startButton.setTitle("Stop", for: .normal)
                     }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                        self.takeSnapshot()
+                    }
                 } else {
                     print("*** DEMO *** Error: %@", error ?? "")
                 }
@@ -110,6 +114,15 @@ class ViewController: UIViewController {
 
 fileprivate extension ViewController {
     //#pragma mark - Private methods
+    
+    fileprivate func takeSnapshot() {
+        recorder.takeSnapshot { (image, error) in
+            if let image = image {
+                print("Took a snapshot with:\(image.size)")
+                // do something with the snapshot
+            }
+        }
+    }
     
     fileprivate func defaultStreamInfo() -> AXStreamInfo {
         let info = AXStreamInfo.init()

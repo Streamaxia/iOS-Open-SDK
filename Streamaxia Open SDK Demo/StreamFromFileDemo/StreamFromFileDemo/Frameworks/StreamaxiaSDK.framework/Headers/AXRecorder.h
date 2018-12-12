@@ -145,6 +145,13 @@ typedef NS_ENUM(NSInteger, AXRecorderState) {
 - (void)startStreamingWithCompletion:(void (^)(BOOL success, AXError *error))completionBlock;
 
 /**
+ Takes a snapshot of the next available video feed. This method supports just one snapshot simultaneously. Calling this method multiple times without waiting for a response is an error and results in undefined befaviour.
+ 
+ @param completionBlock The completion block.
+ */
+- (void)takeSnapshotWithCompletion:(void (^)(UIImage *snapshot, AXError *error))completionBlock;
+
+/**
  Stops the streaming.
  */
 - (void)stopStreaming;
