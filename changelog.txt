@@ -1,0 +1,26 @@
+02/10/2017
+Re-wrote streaming API which minimised the lib size, increased performance Fixed the metadata bug
+Implemented adaptive bitrate
+Implemented local save
+Implemented auto Wifi/3G switch V3.2 03/06/2017
+Updated and simplified recorder API for handling orientation changes
+Resolution can be inverted to support streaming in landscape orientation without cropping Bugfixes for muting stream audio and rtmp_init
+Implemented output to multiple streaming sources (beta)
+
+06/22/2017
+Audio sync bugfix Performance improvements
+
+07/17/2017
+Minor bugfixes
+
+04/22/2018
+Bugfixes
+Performance Improvements
+
+12/12/2018
+Bugfixes
+Tap to focus feature is now available
+Taking snapshots while streaming is now possible
+
+02/15/2019
+Fix AXStreamer video settings being ignored
