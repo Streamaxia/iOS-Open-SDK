@@ -24,3 +24,6 @@ Taking snapshots while streaming is now possible
 
 02/15/2019
 Fix AXStreamer video settings being ignored
+
+11/12/2019
+Fix HDR issue causing framerate issues
