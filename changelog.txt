@@ -27,3 +27,6 @@ Fix AXStreamer video settings being ignored
 
 11/12/2019
 Fix HDR issue causing framerate issues
+
+09/03/2020
+Fix iphone 11 audio issues

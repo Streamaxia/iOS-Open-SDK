@@ -12,7 +12,7 @@
 
 // Modify this to your desired stream name
 // Playback will be avaiable at play.streamaxia.com/<your-stream-name>
-NSString * const kStreamaxiaStreamName = @"YOUR-STREAM-NAME-HERE";
+NSString * const kStreamaxiaStreamName = @"9dd61f";
 
 @interface AGViewController () <AXRecorderDelegate>
 
@@ -75,7 +75,7 @@ const NSInteger kAGStreamerVCStopButtonTag = 1;
         info.useSecureConnection = NO;
         
         NSString *urlString = [NSString stringWithFormat:@"rtmp://rtmp.streamaxia.com/streamaxia/%@",kStreamaxiaStreamName];
-        info.customStreamURLString = @"rtmp://a.rtmp.youtube.com/live2/79jm-e43f-4v5t-573u";
+        info.customStreamURLString = urlString;//@"rtmp://a.rtmp.youtube.com/live2/79jm-e43f-4v5t-573u";
         
 //    Alternatively you can split the URL into its corresponding RTMP parts
 //      info.serverAddress = @"rtmp.streamaxia.com";

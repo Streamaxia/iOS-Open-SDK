@@ -15,7 +15,8 @@
  - AXAudioSampleRate44100Hz: The standard audio sampling rate - 44,1 kHz = 44100 Hz. This is the recommended value to be used.
  */
 typedef NS_ENUM(NSInteger, AXAudioSampleRate) {
-    AXAudioSampleRate44100Hz = 44100
+    AXAudioSampleRate44100Hz = 44100,
+    AXAudioSampleRate48000Hz = 48000
 };
 
 /**
