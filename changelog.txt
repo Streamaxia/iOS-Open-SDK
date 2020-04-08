@@ -39,3 +39,6 @@ Fix connection drop crash
 
 03/04/2020
 Fix threading issue
+
+08/04/2020
+Fix mute issue
