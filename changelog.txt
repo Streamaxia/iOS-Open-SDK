@@ -42,3 +42,6 @@ Fix threading issue
 
 08/04/2020
 Fix mute issue
+
+20/04/2020
+Fix manually setting audio session
