@@ -48,3 +48,4 @@ Fix manually setting audio session
 
 29/04/2020
 Fix potential AXRecorder state inconsistency
+Fix queue load issue
