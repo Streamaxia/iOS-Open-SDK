@@ -128,6 +128,9 @@ NSString * const kStreamaxiaStreamName = @"testy";
     self.streamer.delegate = self;
     [self.streamer.videoSettings setResolution:AXVideoFrameResolutionSize1920x1080 withError:nil];
     [self.streamer.audioSettings setChannelsNumber:1 withError:nil];
+    [self.streamer.audioSettings setSampleRate:44100 withError:nil];
+    NSError *error = nil;
+    [self.streamer.settings setLocalSave:YES withError:&error];
     //[self.streamer.videoSettings setResolutionInverted:YES withError:nil];
     
     AXStreamInfo *streamInfo = [AXStreamInfo new];
