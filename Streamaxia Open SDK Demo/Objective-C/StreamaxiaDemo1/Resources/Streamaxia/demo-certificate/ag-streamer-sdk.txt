@@ -11,16 +11,16 @@
 ==================================================
 ****** SDK Settings ******
 ==================================================
->>> START DATE: --------------------------- [27 January 2020] 
->>> EXPIRATION DATE: ---------------------- [03 January 2120] 
->>> VALID FOR: ---------------------------- [36500] DAYS 
+>>> START DATE: --------------------------- [22 July 2020] 
+>>> EXPIRATION DATE: ---------------------- [04 December 2021] 
+>>> VALID FOR: ---------------------------- [500] DAYS 
 >>> IS LOCKED ON CERTAIN BUNDLE IDs: ------ [YES] 
->>> HAS LIMITED STREAMING TIME: ------ [NO] 
+>>> HAS LIMITED STREAMING TIME: ------ [10 HOURS] 
 ==================================================
 ****** Locked on the following bundle IDs ******
 ==================================================
->>> [1] com.streamaxia.swift.demo 
->>> [2] com.streamaxia.obj-c.demo 
+>>> [1] com.streamaxia.obj-c.demo 
+>>> [2] com.streamaxia.swift.demo 
 ==================================================
 ****** Active features ******
 ==================================================
