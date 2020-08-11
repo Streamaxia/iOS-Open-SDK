@@ -52,3 +52,6 @@ Fix queue load issue
 
 15/05/2020
 Fix AXStreamer crash
+
+11/08/2020
+Bug fixes
