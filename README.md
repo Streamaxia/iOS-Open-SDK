@@ -1,4 +1,4 @@
-# ![pageres](files/01-Image-big.jpg)
+# ![pageres](https://www.streamaxia.com/wp-content/uploads/2020/04/iphone11-concert-1.jpg)
 
 ## Introduction
 [Streamaxia OpenSDK](https://www.streamaxia.com/opensdk-ios-rtmp-library/) is an easy to integrate, low-latency live video streaming library for iOS and Android mobile apps. Open live video broadcast – not limited to any specific CDN, RTMP Media Server or proprietary protocols. Drag, Drop & Go Live on Facebook, YouTube, Twitch, Twitter, Microsoft Azure, Adobe Media Server, Wowza, Red5, Sewise and more!
@@ -6,6 +6,11 @@
 This is a short programming guide about how to test Streamaxia OpenSDK library using our demo iOS project.
 
 [Try and order Streamaxia OpenSDK today!](https://www.streamaxia.com/opensdk-pricing/)
+
+[Frequently Asked Questions for iOS / Android RTMP Streaming](https://blog.streamaxia.com/frequently-asked-questions-for-ios-android-rtmp-streaming-a2fb3c7594db)
+
+[RTMP Versus WebRTC. Which One To Choose?](https://blog.streamaxia.com/rtmp-versus-webrtc-which-one-to-choose-2020-report-fed7e4d84b18)
+
 
 ## iOS Demo Project Installation:
 
@@ -16,10 +21,10 @@ This is a short programming guide about how to test Streamaxia OpenSDK library u
 // Modify this to your desired stream name
 NSString * const kStreamaxiaStreamName = @"YOUR-STREAM-NAME-HERE";
 ```
-Build and run the project. You can view your broadcast at the following url: http://play.streamaxia.com/streamaxia/yourStreamName  
-Note: You have to build and run the project on a physical device, because streaming is not possible from the simulator
+Build and run the project. You can view your broadcast at the following url: http://play.streamaxia.com/streamaxia/yourStreamName, provided you are broadcasting at rtmp://rtmp.streamaxia.com/streamaxia/yourStreamName (You can use our RTMP media server for testing purposes, only. You need to provide you own media server. We recommend Wowza.)
+Note: You have to build and run the project on a physical device, because streaming is not possible from the simulator.
 
-For more information about the Streamaxia Open SDK set up please check [Streamaxia iOS Open SDK Setup Guide](files/OpenSDK_iOS_3.2.pdf)
+For more information about the Streamaxia Open SDK set up please check [Streamaxia iOS Open SDK Setup Guide](files/OpenSDK_iOS_3.3.pdf)
 
 ## Terms
 By using this software, you agree the terms specified in the Licensing Agreement represented by the [License Agreement](LICENSE.md)
