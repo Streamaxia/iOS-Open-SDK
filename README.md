@@ -1,7 +1,7 @@
 # ![pageres](https://www.streamaxia.com/wp-content/uploads/2020/04/iphone11-concert-1.jpg)
 
 ## Introduction
-[Streamaxia OpenSDK](https://www.streamaxia.com/opensdk-ios-rtmp-library/) is an easy to integrate, low-latency live video streaming library for iOS and Android mobile apps. Open live video broadcast – not limited to any specific CDN, RTMP Media Server or proprietary protocols. Drag, Drop & Go Live on Facebook, YouTube, Twitch, Twitter, Microsoft Azure, Adobe Media Server, Wowza, Red5, Sewise and more!
+[Streamaxia iOS OpenSDK](https://www.streamaxia.com/opensdk-ios-rtmp-library/) is an easy to integrate, low-latency live video streaming library for iOS and Android mobile apps. Open live video broadcast – not limited to any specific CDN, RTMP Media Server or proprietary protocols. Drag, Drop & Go Live on Facebook, YouTube, Twitch, Twitter, Microsoft Azure, Adobe Media Server, Wowza, Red5, Sewise and more!
 
 This is a short programming guide about how to test Streamaxia OpenSDK library using our demo iOS project.
 
@@ -10,6 +10,10 @@ This is a short programming guide about how to test Streamaxia OpenSDK library u
 [Frequently Asked Questions for iOS / Android RTMP Streaming](https://blog.streamaxia.com/frequently-asked-questions-for-ios-android-rtmp-streaming-a2fb3c7594db)
 
 [RTMP Versus WebRTC. Which One To Choose?](https://blog.streamaxia.com/rtmp-versus-webrtc-which-one-to-choose-2020-report-fed7e4d84b18)
+
+[Why Choose Streamaxia OpenSDK Over Open-Source or Other Alternatives?](https://blog.streamaxia.com/why-choose-streamaxia-opensdk-over-open-source-or-other-alternatives-a031fbb31ab4)
+
+[Streamaxia Announces v3.3: iOS 14 & Android 11 Compatibility and Android RTMP Support](https://blog.streamaxia.com/streamaxia-announces-v3-3-ios-14-android-11-compatibility-and-android-rtmp-support-a1a7a2a74d6f)
 
 
 ## iOS Demo Project Installation:
@@ -22,6 +26,7 @@ This is a short programming guide about how to test Streamaxia OpenSDK library u
 NSString * const kStreamaxiaStreamName = @"YOUR-STREAM-NAME-HERE";
 ```
 Build and run the project. You can view your broadcast at the following url: http://play.streamaxia.com/streamaxia/yourStreamName, provided you are broadcasting at rtmp://rtmp.streamaxia.com/streamaxia/yourStreamName (You can use our RTMP media server for testing purposes, only. You need to provide you own media server. We recommend Wowza.)
+
 Note: You have to build and run the project on a physical device, because streaming is not possible from the simulator.
 
 For more information about the Streamaxia Open SDK set up please check [Streamaxia iOS Open SDK Setup Guide](files/OpenSDK_iOS_3.3.pdf)
@@ -58,6 +63,7 @@ The counter is reset every month on the 1st.
 
 - [Streamaxia Blog](https://medium.com/streamaxia)
 
+- [Full iOS API (download the entire folder and run index.html)](files/Documentation)
 
 
 
