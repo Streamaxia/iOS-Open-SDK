@@ -120,6 +120,11 @@ typedef NS_ENUM(NSInteger, AXStreamerState) {
 - (void)sendAudioBuffer:(CMSampleBufferRef)sampleBuffer;
 
 /**
+Feed raw audio buffer to the streamer. The sample buffer must contain maximum PCM audio samples. Make sure sample rate is same as the value set in the configuration. This method is mutually excluse with - (void)sendAudioBuffer:(CMSampleBufferRef)sampleBuffer; use one or the other.
+*/
+- (void)sendAudioData:(nullable NSData*)audioData timestamp:(uint64_t)timestamp;
+
+/**
  Add a streaming source. Sources can be added at any point, before and after streaming. By default the newly added stream source is not enabled, meaning that it doesn't stream yet. Setting the on property to YES will establish a connection and start the streaming to that source.
  
  @param streamInfo Stream info used to create the stream source.
