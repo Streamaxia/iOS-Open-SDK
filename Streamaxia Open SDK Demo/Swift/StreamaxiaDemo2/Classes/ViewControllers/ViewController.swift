@@ -11,7 +11,7 @@ import StreamaxiaSDK
 
 // Modify this to your desired stream name
 // Playback will be available at play.streamaxia.com/<your-stream-name>
-let kStreamaxiaStreamName: String = "YOUR-STREAM-NAME-HERE"
+let kStreamaxiaStreamName: String = "testy"
 
 /// View controller that displays some basic UI for capturing and streaming
 /// live video and audio media.
