@@ -58,3 +58,6 @@ Bug fixes
 
 16/09/2020
 Add AXStreamer variable buffer size feed method
+
+21/09/2020
+AXStreamer improvements

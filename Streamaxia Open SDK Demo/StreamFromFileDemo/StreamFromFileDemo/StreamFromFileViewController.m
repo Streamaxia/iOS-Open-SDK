@@ -63,7 +63,27 @@ NSString * const kStreamaxiaStreamName = @"testy";
 }
 
 - (void)fileInputSource:(AXFileInputSource *)inputSource didReadAudioSample:(CMSampleBufferRef)sampleBuffer {
-    [self.streamer sendAudioBuffer:sampleBuffer];
+    AudioBufferList audioBufferList;
+    NSMutableData *data = [[NSMutableData alloc] init];
+    CMBlockBufferRef blockBuffer;
+    CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer(sampleBuffer, NULL, &audioBufferList, sizeof(audioBufferList), NULL, NULL, 0, &blockBuffer);
+
+    for( int y=0; y<audioBufferList.mNumberBuffers; y++ )
+    {
+        AudioBuffer audioBuffer = audioBufferList.mBuffers[y];
+        Float32 *frame = (Float32*)audioBuffer.mData;
+
+        [data appendBytes:frame length:audioBuffer.mDataByteSize];
+
+    }
+
+    CFRelease(blockBuffer);
+
+    CMTime ts = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
+    double timestamp = ((ts.value) / ((double)ts.timescale)) * 1000;
+    [self.streamer sendAudioData:data timestamp:timestamp];
+    
+    //[self.streamer sendAudioBuffer:sampleBuffer];
 }
 
 #pragma mark - AXStreamSourceDelegate methods
@@ -127,7 +147,7 @@ NSString * const kStreamaxiaStreamName = @"testy";
     self.streamer = [AXStreamer new];
     self.streamer.delegate = self;
     [self.streamer.videoSettings setResolution:AXVideoFrameResolutionSize1920x1080 withError:nil];
-    [self.streamer.audioSettings setChannelsNumber:1 withError:nil];
+    [self.streamer.audioSettings setChannelsNumber:2 withError:nil];
     [self.streamer.audioSettings setSampleRate:44100 withError:nil];
     NSError *error = nil;
     [self.streamer.settings setLocalSave:YES withError:&error];
