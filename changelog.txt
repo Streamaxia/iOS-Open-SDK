@@ -61,3 +61,6 @@ Add AXStreamer variable buffer size feed method
 
 21/09/2020
 AXStreamer improvements
+
+05/10/2020
+Adaptive bitrate improvements
