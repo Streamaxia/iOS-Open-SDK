@@ -64,3 +64,6 @@ AXStreamer improvements
 
 05/10/2020
 Adaptive bitrate improvements
+
+26/10/2020
+Fix audio session end
