@@ -239,4 +239,23 @@
  */
 - (void)changeVideoOrientation:(AXVideoOrientation)videoOrientation;
 
+/// ----------------------------------------
+/// @name Camera zoom
+/// ----------------------------------------
+
+/**
+ Change the zoom range for the current camera.
+*/
+- (NSRange)getZoomRange;
+
+/**
+ Change the zoom for the current camera.
+*/
+- (CGFloat)getZoom;
+
+/**
+ Set zoom for the current camera.
+*/
+- (void)setZoom:(CGFloat)zoom error:(AXError **)error;
+
 @end

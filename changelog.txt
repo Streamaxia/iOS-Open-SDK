@@ -67,3 +67,6 @@ Adaptive bitrate improvements
 
 26/10/2020
 Fix audio session end
+
+12/11/2020
+Add zoom feature
