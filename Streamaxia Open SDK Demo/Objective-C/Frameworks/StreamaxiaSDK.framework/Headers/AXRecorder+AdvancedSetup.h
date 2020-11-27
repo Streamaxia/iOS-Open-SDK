@@ -27,6 +27,8 @@
  */
 @property (nonatomic, strong, readonly) AVCaptureDevice *currentCamera;
 
+@property (nonatomic, strong, readonly) AVCaptureSession *currentSession;
+
 /// ----------------------------------------
 /// @name Public methods
 /// ----------------------------------------

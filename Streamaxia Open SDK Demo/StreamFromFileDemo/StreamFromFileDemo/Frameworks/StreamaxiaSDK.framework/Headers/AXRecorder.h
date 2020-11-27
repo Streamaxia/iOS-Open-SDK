@@ -236,4 +236,12 @@ typedef NS_ENUM(NSInteger, AXRecorderState) {
  */
 - (void)recorder:(AXRecorder *)recorder didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromCaptureOutput:(AVCaptureOutput *)captureOutput;
 
+/**
+ It's called when an audio buffer was output
+
+ @param recorder The recorder
+ @param sampleBuffer The sample buffer
+ */
+- (void)recorder:(AXRecorder *)recorder didOutputAudioBuffer:(NSData *)data;
+
 @end
