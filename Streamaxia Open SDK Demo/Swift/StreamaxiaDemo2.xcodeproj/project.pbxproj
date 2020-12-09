@@ -180,6 +180,7 @@
 				3EBD240C1D928CD900785BAF /* Frameworks */,
 				3EBD240D1D928CD900785BAF /* Resources */,
 				3EBD25981D92E13600785BAF /* Embed Frameworks */,
+				7439F3DD25813122008C3BCC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -213,6 +214,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -242,6 +244,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7439F3DD25813122008C3BCC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Adapted from https://github.com/realm/realm-cocoa/blob/master/scripts/strip-frameworks.sh\n\n# This script strips all non-valid architectures from dynamic libraries in\n# the application's `Frameworks` directory which is required for App Store submission.\n#\n# The following environment variables are required:\n#\n# BUILT_PRODUCTS_DIR\n# FRAMEWORKS_FOLDER_PATH\n# VALID_ARCHS\n# EXPANDED_CODE_SIGN_IDENTITY\n\nif [[ \"${CONFIGURATION}\" != \"Release\" ]]; then\necho \"Building for non-release, no need to thin frameworks.\"\nexit 0\nfi\n\nif [[ \"${TARGET_BUILD_DIR}\" == *\"iphonesimulator\" ]]; then\necho \"Building for simulator, no need to thin frameworks.\"\nexit 0\nfi\n\n# Signs a framework with the provided identity\ncode_sign() {\n    # Use the current code_sign_identitiy\n    echo \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\n    echo \"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1\"\n    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\"\n}\n\n# Set working directory to product’s embedded frameworks\ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nif [ \"$ACTION\" = \"install\" ]; then\necho \"Copy .bcsymbolmap files to .xcarchive\"\nfind . -name '*.bcsymbolmap' -type f -exec mv {} \"${CONFIGURATION_BUILD_DIR}\" \\;\nelse\n# Delete *.bcsymbolmap files from framework bundle unless archiving\nfind . -name '*.bcsymbolmap' -type f -exec rm -rf \"{}\" +\\;\nfi\n\necho \"Stripping frameworks\"\n\nfor file in $(find . -type f -perm +111); do\n# Skip non-dynamic libraries\nif ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\ncontinue\nfi\n# Get architectures for current file\narchs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\nstripped=\"\"\nfor arch in $archs; do\nif ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n# Strip non-valid architectures in-place\nlipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\nstripped=\"$stripped $arch\"\nfi\ndone\nif [[ \"$stripped\" != \"\" ]]; then\necho \"Stripped $file of architectures:$stripped\"\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\ncode_sign \"${file}\"\nfi\nfi\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EBD240B1D928CD900785BAF /* Sources */ = {
@@ -379,9 +401,9 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = StreamaxiaDemo2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demoappssemble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StreamaxiaDemo2/Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -400,9 +422,9 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = StreamaxiaDemo2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demoappssemble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StreamaxiaDemo2/Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
