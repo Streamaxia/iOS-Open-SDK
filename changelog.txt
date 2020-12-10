@@ -74,3 +74,7 @@ Add zoom feature
 27/11/2020
 Fix audio buffer not being sent
 Add capture session access
+
+09/12/2020
+Fix crash on streaming stop
+Fix xcode 12 archiving
