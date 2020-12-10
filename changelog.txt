@@ -78,3 +78,6 @@ Add capture session access
 09/12/2020
 Fix crash on streaming stop
 Fix xcode 12 archiving
+
+10/12/2020
+Fix syncronization issue
