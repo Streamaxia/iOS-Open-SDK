@@ -81,3 +81,6 @@ Fix xcode 12 archiving
 
 10/12/2020
 Fix syncronization issue
+
+16/12/2020
+Add support for xcframework

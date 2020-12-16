@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,20 +17,19 @@
 		3EBD23FA1D928CA000785BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD23F81D928CA000785BAF /* Main.storyboard */; };
 		3EBD23FC1D928CA000785BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD23FB1D928CA000785BAF /* Assets.xcassets */; };
 		3EBD23FF1D928CA000785BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD23FD1D928CA000785BAF /* LaunchScreen.storyboard */; };
-		3EBD25881D92B99D00785BAF /* StreamaxiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBD25831D92B80500785BAF /* StreamaxiaSDK.framework */; };
-		3EBD25891D92B99D00785BAF /* StreamaxiaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBD25831D92B80500785BAF /* StreamaxiaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74DC89AF258A55210024D175 /* StreamaxiaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC89AE258A55210024D175 /* StreamaxiaSDK.xcframework */; };
+		74DC89B2258A55420024D175 /* StreamaxiaSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DC89AE258A55210024D175 /* StreamaxiaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3EBD258A1D92B99D00785BAF /* Embed Frameworks */ = {
+		74DC89B1258A55340024D175 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3EBD25891D92B99D00785BAF /* StreamaxiaSDK.framework in Embed Frameworks */,
+				74DC89B2258A55420024D175 /* StreamaxiaSDK.xcframework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -50,7 +49,7 @@
 		3EBD23FB1D928CA000785BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EBD23FE1D928CA000785BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EBD24001D928CA000785BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EBD25831D92B80500785BAF /* StreamaxiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StreamaxiaSDK.framework; path = Frameworks/StreamaxiaSDK.framework; sourceTree = "<group>"; };
+		74DC89AE258A55210024D175 /* StreamaxiaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StreamaxiaSDK.xcframework; path = Frameworks/StreamaxiaSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EBD25881D92B99D00785BAF /* StreamaxiaSDK.framework in Frameworks */,
+				74DC89AF258A55210024D175 /* StreamaxiaSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +168,7 @@
 		3EBD24261D928D7300785BAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3EBD25831D92B80500785BAF /* StreamaxiaSDK.framework */,
+				74DC89AE258A55210024D175 /* StreamaxiaSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,7 +183,7 @@
 				3EBD23E81D928CA000785BAF /* Sources */,
 				3EBD23E91D928CA000785BAF /* Frameworks */,
 				3EBD23EA1D928CA000785BAF /* Resources */,
-				3EBD258A1D92B99D00785BAF /* Embed Frameworks */,
+				74DC89B1258A55340024D175 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -384,7 +383,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$SRC_ROOT/Frameworks/**";
 				INFOPLIST_FILE = StreamaxiaDemo1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -410,7 +412,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$SRC_ROOT/Frameworks/**";
 				INFOPLIST_FILE = StreamaxiaDemo1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",

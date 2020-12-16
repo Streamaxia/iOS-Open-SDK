@@ -1,0 +1,6 @@
+framework module StreamaxiaSDK {
+  umbrella header "StreamaxiaSDK.h"
+
+  export *
+  module * { export * }
+}

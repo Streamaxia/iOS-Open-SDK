@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,14 +13,14 @@
 		74CF84C821872CD3005B60C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CF84C721872CD3005B60C6 /* Assets.xcassets */; };
 		74CF84CB21872CD3005B60C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74CF84C921872CD3005B60C6 /* LaunchScreen.storyboard */; };
 		74CF84CE21872CD3005B60C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CF84CD21872CD3005B60C6 /* main.m */; };
-		74CF84D621872D4F005B60C6 /* StreamaxiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CF84D521872D4F005B60C6 /* StreamaxiaSDK.framework */; };
 		74CF84DE21872D73005B60C6 /* ag-streamer-sdk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74CF84DA21872D73005B60C6 /* ag-streamer-sdk.txt */; };
 		74CF84DF21872D73005B60C6 /* ag-streamer-sdk.config in Resources */ = {isa = PBXBuildFile; fileRef = 74CF84DB21872D73005B60C6 /* ag-streamer-sdk.config */; };
 		74CF84E021872D73005B60C6 /* ag-streamer-sdk.key in Resources */ = {isa = PBXBuildFile; fileRef = 74CF84DC21872D73005B60C6 /* ag-streamer-sdk.key */; };
 		74CF84E121872D73005B60C6 /* demo-certificate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74CF84DD21872D73005B60C6 /* demo-certificate.bundle */; };
-		74CF84E321872E09005B60C6 /* StreamaxiaSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74CF84D521872D4F005B60C6 /* StreamaxiaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74CF84E721872EB2005B60C6 /* StreamFromFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CF84E521872EB2005B60C6 /* StreamFromFileViewController.m */; };
 		74CF84E821872EB2005B60C6 /* StreamFromFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CF84E621872EB2005B60C6 /* StreamFromFileViewController.xib */; };
+		74DC89B4258A55B10024D175 /* StreamaxiaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC89B3258A55B10024D175 /* StreamaxiaSDK.xcframework */; };
+		74DC89B5258A55C50024D175 /* StreamaxiaSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DC89B3258A55B10024D175 /* StreamaxiaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				74CF84E321872E09005B60C6 /* StreamaxiaSDK.framework in CopyFiles */,
+				74DC89B5258A55C50024D175 /* StreamaxiaSDK.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,6 @@
 		74CF84CA21872CD3005B60C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74CF84CC21872CD3005B60C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74CF84CD21872CD3005B60C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		74CF84D521872D4F005B60C6 /* StreamaxiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StreamaxiaSDK.framework; sourceTree = "<group>"; };
 		74CF84DA21872D73005B60C6 /* ag-streamer-sdk.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.txt"; sourceTree = "<group>"; };
 		74CF84DB21872D73005B60C6 /* ag-streamer-sdk.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ag-streamer-sdk.config"; sourceTree = "<group>"; };
 		74CF84DC21872D73005B60C6 /* ag-streamer-sdk.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.key"; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		74CF84E421872EB2005B60C6 /* StreamFromFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamFromFileViewController.h; sourceTree = "<group>"; };
 		74CF84E521872EB2005B60C6 /* StreamFromFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamFromFileViewController.m; sourceTree = "<group>"; };
 		74CF84E621872EB2005B60C6 /* StreamFromFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamFromFileViewController.xib; sourceTree = "<group>"; };
+		74DC89B3258A55B10024D175 /* StreamaxiaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StreamaxiaSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74CF84D621872D4F005B60C6 /* StreamaxiaSDK.framework in Frameworks */,
+				74DC89B4258A55B10024D175 /* StreamaxiaSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		74CF84D421872D4F005B60C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74CF84D521872D4F005B60C6 /* StreamaxiaSDK.framework */,
+				74DC89B3258A55B10024D175 /* StreamaxiaSDK.xcframework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,20 +16,19 @@
 		3EBD24181D928CD900785BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD24161D928CD900785BAF /* Main.storyboard */; };
 		3EBD241A1D928CD900785BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD24191D928CD900785BAF /* Assets.xcassets */; };
 		3EBD241D1D928CD900785BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD241B1D928CD900785BAF /* LaunchScreen.storyboard */; };
-		3EBD25961D92E13600785BAF /* StreamaxiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */; };
-		3EBD25971D92E13600785BAF /* StreamaxiaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74DC89A8258A53BB0024D175 /* StreamaxiaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC89A7258A53BB0024D175 /* StreamaxiaSDK.xcframework */; };
+		74DC89AC258A54580024D175 /* StreamaxiaSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DC89A7258A53BB0024D175 /* StreamaxiaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3EBD25981D92E13600785BAF /* Embed Frameworks */ = {
+		74DC89AB258A544A0024D175 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3EBD25971D92E13600785BAF /* StreamaxiaSDK.framework in Embed Frameworks */,
+				74DC89AC258A54580024D175 /* StreamaxiaSDK.xcframework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -46,8 +45,8 @@
 		3EBD24191D928CD900785BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EBD241C1D928CD900785BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EBD241E1D928CD900785BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StreamaxiaSDK.framework; path = Frameworks/StreamaxiaSDK.framework; sourceTree = "<group>"; };
 		3EBD25921D92DEB100785BAF /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		74DC89A7258A53BB0024D175 /* StreamaxiaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StreamaxiaSDK.xcframework; path = Frameworks/StreamaxiaSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EBD25961D92E13600785BAF /* StreamaxiaSDK.framework in Frameworks */,
+				74DC89A8258A53BB0024D175 /* StreamaxiaSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +163,7 @@
 		3EBD25901D92DCED00785BAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3EBD258E1D92DCE900785BAF /* StreamaxiaSDK.framework */,
+				74DC89A7258A53BB0024D175 /* StreamaxiaSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,8 +178,7 @@
 				3EBD240B1D928CD900785BAF /* Sources */,
 				3EBD240C1D928CD900785BAF /* Frameworks */,
 				3EBD240D1D928CD900785BAF /* Resources */,
-				3EBD25981D92E13600785BAF /* Embed Frameworks */,
-				7439F3DD25813122008C3BCC /* ShellScript */,
+				74DC89AB258A544A0024D175 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -244,26 +242,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7439F3DD25813122008C3BCC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Adapted from https://github.com/realm/realm-cocoa/blob/master/scripts/strip-frameworks.sh\n\n# This script strips all non-valid architectures from dynamic libraries in\n# the application's `Frameworks` directory which is required for App Store submission.\n#\n# The following environment variables are required:\n#\n# BUILT_PRODUCTS_DIR\n# FRAMEWORKS_FOLDER_PATH\n# VALID_ARCHS\n# EXPANDED_CODE_SIGN_IDENTITY\n\nif [[ \"${CONFIGURATION}\" != \"Release\" ]]; then\necho \"Building for non-release, no need to thin frameworks.\"\nexit 0\nfi\n\nif [[ \"${TARGET_BUILD_DIR}\" == *\"iphonesimulator\" ]]; then\necho \"Building for simulator, no need to thin frameworks.\"\nexit 0\nfi\n\n# Signs a framework with the provided identity\ncode_sign() {\n    # Use the current code_sign_identitiy\n    echo \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\n    echo \"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1\"\n    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\"\n}\n\n# Set working directory to product’s embedded frameworks\ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nif [ \"$ACTION\" = \"install\" ]; then\necho \"Copy .bcsymbolmap files to .xcarchive\"\nfind . -name '*.bcsymbolmap' -type f -exec mv {} \"${CONFIGURATION_BUILD_DIR}\" \\;\nelse\n# Delete *.bcsymbolmap files from framework bundle unless archiving\nfind . -name '*.bcsymbolmap' -type f -exec rm -rf \"{}\" +\\;\nfi\n\necho \"Stripping frameworks\"\n\nfor file in $(find . -type f -perm +111); do\n# Skip non-dynamic libraries\nif ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\ncontinue\nfi\n# Get architectures for current file\narchs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\nstripped=\"\"\nfor arch in $archs; do\nif ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n# Strip non-valid architectures in-place\nlipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\nstripped=\"$stripped $arch\"\nfi\ndone\nif [[ \"$stripped\" != \"\" ]]; then\necho \"Stripped $file of architectures:$stripped\"\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\ncode_sign \"${file}\"\nfi\nfi\ndone\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EBD240B1D928CD900785BAF /* Sources */ = {
@@ -384,7 +362,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -402,7 +381,10 @@
 				);
 				INFOPLIST_FILE = StreamaxiaDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StreamaxiaDemo2/Swift-Bridging-Header.h";
@@ -423,7 +405,10 @@
 				);
 				INFOPLIST_FILE = StreamaxiaDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.streamaxia.swift.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StreamaxiaDemo2/Swift-Bridging-Header.h";
