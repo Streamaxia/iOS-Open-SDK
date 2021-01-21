@@ -84,3 +84,6 @@ Fix syncronization issue
 
 16/12/2020
 Add support for xcframework
+
+21/01/2021
+Add custom resolution to AXStreamer

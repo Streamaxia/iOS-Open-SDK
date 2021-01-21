@@ -28,6 +28,12 @@
 @property (nonatomic, assign, readonly) AXVideoFrameResolution  resolution;
 
 /**
+ *  The video frame size, in pixels.
+ *  The value is determined by the videoFrameResolution value. If AXVideoFrameResolutionCustom is used, this must be set explicitly.
+ */
+@property (nonatomic, assign, readonly) AXVideoFrameSize        videoFrameSize;
+
+/**
  Property used to access the resolution inverted setting.
  */
 @property (nonatomic, assign, readonly) BOOL                    resolutionInverted;
