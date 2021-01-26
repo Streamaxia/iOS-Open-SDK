@@ -126,7 +126,7 @@
 		</data>
 		<key>Headers/AXStreamerVideoSettings.h</key>
 		<data>
-		/F8r+xTBwEQggdbtMNT0NpUP6/Y=
+		25A2SaV+uHVlXCUXQCLB39OeTls=
 		</data>
 		<key>Headers/AXUtils+Bitrate.h</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OTQrIFPD7fw0L9QfOTFC6TMjzK0=
+		sKSIejhpAWuThaMfm47en/qw2k0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -501,11 +501,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/F8r+xTBwEQggdbtMNT0NpUP6/Y=
+			25A2SaV+uHVlXCUXQCLB39OeTls=
 			</data>
 			<key>hash2</key>
 			<data>
-			1Shqm3PaRAUbMbI1QGebJoeX/cVClWCLzfQnPlTpmJQ=
+			QatMcauKNEES1JHccrz8Rps2GVzsbWt3+elFM3wZZnY=
 			</data>
 		</dict>
 		<key>Headers/AXUtils+Bitrate.h</key>

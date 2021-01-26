@@ -57,6 +57,14 @@
 - (void)setResolution:(AXVideoFrameResolution)resolution withError:(AXError **)error;
 
 /**
+ Method used to set the custom resolution for the stream.
+ 
+ @param frameSize Custom resolution to be set.
+ @param error      Output error. It will be set if the setting could not be set.
+ */
+- (void)setVideoFrameSize:(AXVideoFrameSize)frameSize withError:(AXError **)error ;
+
+/**
  Method used to set the resolution inverted for the stream.
  
  @param resolutionInverted Resolution inversion of the stream to be set.
