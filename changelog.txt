@@ -87,3 +87,6 @@ Add support for xcframework
 
 21/01/2021
 Add custom resolution to AXStreamer
+
+02/03/2021
+Add bad connection failure error callback
