@@ -47,6 +47,7 @@ typedef NS_ENUM(NSInteger, AXErrorCode) {
     AXErrorCodeSDKInvalidBundleID,
     AXErrorCodeSDKInvalidLicenceKey,
     AXErrorCodeSDKFeatureNotAvailable,
+    AXErrorCodeSDKLicenseInvalidOnCurrentVersion,
     
     AXErrorCodeAudioEncodingFailure = 60001,
     AXErrorCodeVideoEncodingFailure = 70001,
