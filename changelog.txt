@@ -90,3 +90,6 @@ Add custom resolution to AXStreamer
 
 02/03/2021
 Add bad connection failure error callback
+
+16/03/2021
+Add 1 year free update
