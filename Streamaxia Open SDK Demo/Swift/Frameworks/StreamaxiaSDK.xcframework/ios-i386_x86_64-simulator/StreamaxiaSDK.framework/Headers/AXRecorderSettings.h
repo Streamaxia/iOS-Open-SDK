@@ -99,6 +99,11 @@
  */
 @property (nonatomic, assign) BOOL configureAudioSessionManually;
 
+/**
+ *  Default is NO. Set to YES if your local recording will be available in Photos app.
+ */
+@property (nonatomic, assign) BOOL exportLocalVideoToAssetLibrary;
+
 /// ----------------------------------------
 /// @name Lifecycle
 /// ----------------------------------------

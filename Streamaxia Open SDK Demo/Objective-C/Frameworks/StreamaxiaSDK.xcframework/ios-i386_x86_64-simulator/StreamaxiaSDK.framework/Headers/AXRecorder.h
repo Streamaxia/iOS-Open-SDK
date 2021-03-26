@@ -136,6 +136,24 @@ typedef NS_ENUM(NSInteger, AXRecorderState) {
 - (void)prepareToRecord;
 
 /**
+Starts the recording.
+The completion block is returning the info about the success of this operation. If recording couldn't be
+started, then the error contains info about the reason of failure.
+
+@param completionBlock The completion block.
+*/
+- (void)startRecordingWithCompletion:(void (^)(BOOL success, AXError *error))completionBlock;
+
+/**
+Stops the recording.
+The completion block is returning the info about the success of this operation. If recording couldn't be
+stopped, then the error contains info about the reason of failure.
+
+@param completionBlock The completion block.
+*/
+- (void)stopRecordingWithCompletion:(void (^)(BOOL success, AXError *error, NSURL *file))completionBlock;
+
+/**
  Starts the streaming.
  The completion block is returning the info about the success of this operation. If streaming couldn't be
  started, then the error contains info about the reason of failure.
@@ -188,6 +206,15 @@ typedef NS_ENUM(NSInteger, AXRecorderState) {
  @param deltaTime The total time passed.
  */
 - (void)recorder:(AXRecorder *)recorder didUpdateStreamTime:(NSTimeInterval)deltaTime;
+
+/**
+ It's called when the recorder updates the passes time since the start of the recording.
+ The time passed is provided in seconds, since the start of the recording.
+
+ @param recorder  The recorder.
+ @param deltaTime The total time passed since recording.
+ */
+- (void)recorder:(AXRecorder *)recorder didUpdateRecordTime:(NSTimeInterval)deltaTime;
 
 /**
  It's called when the recorder has received some info.
