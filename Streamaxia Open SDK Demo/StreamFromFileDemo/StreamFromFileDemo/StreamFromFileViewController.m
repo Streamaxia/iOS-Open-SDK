@@ -81,9 +81,9 @@ NSString * const kStreamaxiaStreamName = @"testy";
 
     CMTime ts = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
     double timestamp = ((ts.value) / ((double)ts.timescale)) * 1000;
-    [self.streamer sendAudioData:data timestamp:timestamp];
+    //[self.streamer sendAudioData:data timestamp:timestamp];
     
-    //[self.streamer sendAudioBuffer:sampleBuffer];
+    [self.streamer sendAudioBuffer:sampleBuffer];
 }
 
 #pragma mark - AXStreamSourceDelegate methods
