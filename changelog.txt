@@ -93,3 +93,6 @@ Add bad connection failure error callback
 
 16/03/2021
 Add 1 year free update
+
+20/04/2021
+Add current bitrate callback and property access

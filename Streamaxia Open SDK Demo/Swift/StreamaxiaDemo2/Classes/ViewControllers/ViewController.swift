@@ -326,6 +326,10 @@ extension ViewController: AXRecorderDelegate {
     func recorder(_ recorder: AXRecorder!, didReceiveError error: AXError!) {
         print("*** DEMO *** did receive error: %@", error)
     }
+    
+    func recorder(_ recorder: AXRecorder!, didUpdateBitrate bitrate: UInt) {
+        print("*** DEMO *** streaming bitrate \(bitrate)")
+    }
 }
 
 // MARK: - UI Setup -
