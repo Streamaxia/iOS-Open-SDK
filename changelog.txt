@@ -96,3 +96,6 @@ Add 1 year free update
 
 20/04/2021
 Add current bitrate callback and property access
+
+06/05/2021
+Fix timestamp sync issue on new devices
