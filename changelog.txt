@@ -99,3 +99,6 @@ Add current bitrate callback and property access
 
 06/05/2021
 Fix timestamp sync issue on new devices
+
+11/08/2021
+Add route change recorder state update
