@@ -102,3 +102,6 @@ Fix timestamp sync issue on new devices
 
 11/08/2021
 Add route change recorder state update
+
+18/08/2021
+Add audio background mode stop session
