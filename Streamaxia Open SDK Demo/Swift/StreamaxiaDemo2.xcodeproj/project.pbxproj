@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246831E3247773F0000A3381 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246831E2247773F0000A3381 /* SampleListViewController.swift */; };
+		246831E524777B81000A3381 /* ARFaceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246831E424777B80000A3381 /* ARFaceTrackingViewController.swift */; };
+		24977CD22477B51B00715077 /* VirtualContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24977CD12477B51B00715077 /* VirtualContentUpdater.swift */; };
+		24977CD42477B98300715077 /* FaceEffect.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 24977CD32477B98300715077 /* FaceEffect.scnassets */; };
+		24977CD62477BE1700715077 /* Pylon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24977CD52477BE1700715077 /* Pylon.swift */; };
+		24977CD82477D4FB00715077 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24977CD72477D4FB00715077 /* UIImageExtension.swift */; };
 		385EE0191EAE020400148DDB /* ag-streamer-sdk.config in Resources */ = {isa = PBXBuildFile; fileRef = 385EE0161EAE020400148DDB /* ag-streamer-sdk.config */; };
 		385EE01A1EAE020400148DDB /* ag-streamer-sdk.key in Resources */ = {isa = PBXBuildFile; fileRef = 385EE0171EAE020400148DDB /* ag-streamer-sdk.key */; };
 		385EE01B1EAE020400148DDB /* ag-streamer-sdk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 385EE0181EAE020400148DDB /* ag-streamer-sdk.txt */; };
@@ -34,6 +40,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		246831E2247773F0000A3381 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
+		246831E424777B80000A3381 /* ARFaceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceTrackingViewController.swift; sourceTree = "<group>"; };
+		24977CD12477B51B00715077 /* VirtualContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContentUpdater.swift; sourceTree = "<group>"; };
+		24977CD32477B98300715077 /* FaceEffect.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = FaceEffect.scnassets; sourceTree = "<group>"; };
+		24977CD52477BE1700715077 /* Pylon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pylon.swift; sourceTree = "<group>"; };
+		24977CD72477D4FB00715077 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		385EE0161EAE020400148DDB /* ag-streamer-sdk.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ag-streamer-sdk.config"; sourceTree = "<group>"; };
 		385EE0171EAE020400148DDB /* ag-streamer-sdk.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.key"; sourceTree = "<group>"; };
 		385EE0181EAE020400148DDB /* ag-streamer-sdk.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ag-streamer-sdk.txt"; sourceTree = "<group>"; };
@@ -110,6 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				3E7F95B51D93F43E00867621 /* ViewController.swift */,
+				246831E2247773F0000A3381 /* SampleListViewController.swift */,
+				246831E424777B80000A3381 /* ARFaceTrackingViewController.swift */,
+				24977CD12477B51B00715077 /* VirtualContentUpdater.swift */,
+				24977CD52477BE1700715077 /* Pylon.swift */,
+				24977CD72477D4FB00715077 /* UIImageExtension.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,6 +168,7 @@
 		3EBD24111D928CD900785BAF /* StreamaxiaDemo2 */ = {
 			isa = PBXGroup;
 			children = (
+				24977CD32477B98300715077 /* FaceEffect.scnassets */,
 				3EBD24191D928CD900785BAF /* Assets.xcassets */,
 				3E7F95B11D93F43E00867621 /* Classes */,
 				3E7F95B61D93F43E00867621 /* Resources */,
@@ -235,6 +253,7 @@
 				385EE0191EAE020400148DDB /* ag-streamer-sdk.config in Resources */,
 				3EBD241D1D928CD900785BAF /* LaunchScreen.storyboard in Resources */,
 				385EE01A1EAE020400148DDB /* ag-streamer-sdk.key in Resources */,
+				24977CD42477B98300715077 /* FaceEffect.scnassets in Resources */,
 				3EBD241A1D928CD900785BAF /* Assets.xcassets in Resources */,
 				385EE01B1EAE020400148DDB /* ag-streamer-sdk.txt in Resources */,
 				3EBD24181D928CD900785BAF /* Main.storyboard in Resources */,
@@ -248,7 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246831E3247773F0000A3381 /* SampleListViewController.swift in Sources */,
+				24977CD62477BE1700715077 /* Pylon.swift in Sources */,
+				24977CD22477B51B00715077 /* VirtualContentUpdater.swift in Sources */,
+				246831E524777B81000A3381 /* ARFaceTrackingViewController.swift in Sources */,
 				3E7F95BE1D93F43E00867621 /* ViewController.swift in Sources */,
+				24977CD82477D4FB00715077 /* UIImageExtension.swift in Sources */,
 				3E7F95BD1D93F43E00867621 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
