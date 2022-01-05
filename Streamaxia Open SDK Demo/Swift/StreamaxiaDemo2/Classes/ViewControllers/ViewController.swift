@@ -27,9 +27,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    @IBOutlet weak var startLocalRecordButton: UIButton!
+    
     @IBOutlet weak var leftLabel: UILabel!
     
     @IBOutlet weak var rightLabel: UILabel!
+    
+    @IBOutlet weak var leftRecordLabel: UILabel!
+    
+    @IBOutlet weak var rightRecordLabel: UILabel!
     
     @IBOutlet weak var infoLabel: UILabel!
     
@@ -108,6 +114,40 @@ class ViewController: UIViewController {
             self.updateLabel(time: 0.0)
         }
     }
+    
+    @IBAction func startLocalRecordButtonPressed(_ button: UIButton) {
+        if (button.tag == self.kStartButtonTag) {
+            print("*** DEMO *** START record button pressed.")
+            
+            self.checkOrientation()
+            
+            self.recorder.startRecording(completion: { (success, error) in
+                print("*** DEMO *** The stream started with success: %@", success ? "YES" : "NO")
+                
+                if (success) {
+                    DispatchQueue.main.async {
+                        button.tag = self.kStopButtonTag
+                        button.setTitle("Stop", for: .normal)
+                        self.leftRecordLabel.text = "[Recording]"
+                    }
+                } else {
+                    print("*** DEMO *** Error: %@", error ?? "")
+                }
+            })
+        } else if (button.tag == self.kStopButtonTag) {
+            print("*** DEMO *** STOP button pressed.")
+            
+            button.tag = self.kStartButtonTag
+            button.setTitle("Start", for: .normal)
+            self.recorder.stopRecording(completion: { success, error, url in
+                print("*** DEMO *** The stream stopped with success: %@", success ? "YES" : "NO")
+                DispatchQueue.main.async {
+                    self.leftRecordLabel.text = "[Stopped]"
+                }
+            })
+            self.updateRecordLabel(time: 0.0)
+        }
+    }
 }
 
 // MARK: - Private methods -
@@ -148,6 +188,7 @@ fileprivate extension ViewController {
         settings.videoFrameResolution = .standard720p
         settings.videoBitrate = utils.bitrate(for: settings.videoFrameResolution)
         settings.keyFrameInterval = Int(0.5 * Double(settings.frameRate))
+        settings.exportLocalVideoToAssetLibrary = true
         
         return settings
     }
@@ -206,13 +247,6 @@ fileprivate extension ViewController {
                 error = nil
             }
             
-            // Enable local save
-            // The broadcast will be saved to the users camera roll when finished
-            recorder.activateFeatureSaveLocallyWithError(&error)
-            if error != nil {
-                print("*** ERROR activating feature save locally: \(error!.message)")
-            }
-            
             // Enable tap to focus
             // The focus and exposure will be adjusted based on your selection
             recorder.activateFeatureTapToFocus { (success, error) in
@@ -245,6 +279,19 @@ fileprivate extension ViewController {
         }
     }
     
+    fileprivate func updateRecordLabel(time: TimeInterval) {
+        let t = Int(time)
+        let s = t % 60
+        let m = (t / 60) % 60
+        let h = t / 3600
+        
+        let text = String.init(format: "T: %.2ld:%.2ld:%.2ld", Int(h), Int(m), Int(s))
+        
+        DispatchQueue.main.async {
+            self.rightRecordLabel.text = text
+        }
+    }
+    
     fileprivate func checkOrientation() {
         let currentOrientation: UIInterfaceOrientation = UIApplication.shared.statusBarOrientation
         var error: AXError? = nil
@@ -271,7 +318,7 @@ extension ViewController: AXRecorderDelegate {
         case .stopped:
             string = "[Stopped]"
         case .recording:
-            string = "[Recording]"
+            string = "[Streaming]"
         case .starting:
             string = "[Starting...]"
         case .stopping:
@@ -293,6 +340,13 @@ extension ViewController: AXRecorderDelegate {
         // Show the recording time in the right label
         DispatchQueue.main.async {
             self.updateLabel(time: deltaTime)
+        }
+    }
+    
+    func recorder(_ recorder: AXRecorder!, didUpdateRecordTime deltaTime: TimeInterval) {
+        // Show the recording time in the right label
+        DispatchQueue.main.async {
+            self.updateRecordLabel(time: deltaTime)
         }
     }
     
@@ -351,8 +405,11 @@ fileprivate extension ViewController {
     fileprivate func setupUI() {
         self.setupMain()
         self.setupStartButton()
+        self.setupStartLocalRecordButton()
         self.setupLeftLabel()
+        self.setupLeftRecordLabel()
         self.setupRightLabel()
+        self.setupRightRecordLabel()
         self.setupInfoLabel()
     }
     
@@ -370,7 +427,18 @@ fileprivate extension ViewController {
         button.tintColor = UIColor.white
         button.tag = self.kStartButtonTag
         button.titleLabel?.font = self.buttonFont()
-        button.setTitle("Start", for: .normal)
+        button.setTitle("Start streaming", for: .normal)
+    }
+    
+    private func setupStartLocalRecordButton() {
+        let button: UIButton = self.startLocalRecordButton!
+        
+        button.layer.cornerRadius = self.startLocalRecordButton.frame.size.height * 0.5
+        button.backgroundColor = UIColor.black
+        button.tintColor = UIColor.white
+        button.tag = self.kStartButtonTag
+        button.titleLabel?.font = self.buttonFont()
+        button.setTitle("Start local record", for: .normal)
     }
     
     private func setupLeftLabel() {
@@ -382,8 +450,26 @@ fileprivate extension ViewController {
         label.textColor = UIColor.white
     }
     
+    private func setupLeftRecordLabel() {
+        let label = self.leftRecordLabel!
+        
+        label.font = self.labelFont()
+        label.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        label.text = "[N/A]"
+        label.textColor = UIColor.white
+    }
+    
     private func setupRightLabel() {
         let label = self.rightLabel!
+        
+        label.font = self.labelFont()
+        label.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        label.text = "T: 00:00:00"
+        label.textColor = UIColor.white
+    }
+    
+    private func setupRightRecordLabel() {
+        let label = self.rightRecordLabel!
         
         label.font = self.labelFont()
         label.backgroundColor = UIColor.black.withAlphaComponent(0.8)
