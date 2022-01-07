@@ -16,8 +16,8 @@
 		3EBD24181D928CD900785BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD24161D928CD900785BAF /* Main.storyboard */; };
 		3EBD241A1D928CD900785BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD24191D928CD900785BAF /* Assets.xcassets */; };
 		3EBD241D1D928CD900785BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD241B1D928CD900785BAF /* LaunchScreen.storyboard */; };
+		74CE2D0D27884375003A1602 /* StreamaxiaSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DC89A7258A53BB0024D175 /* StreamaxiaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74DC89A8258A53BB0024D175 /* StreamaxiaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC89A7258A53BB0024D175 /* StreamaxiaSDK.xcframework */; };
-		74DC89AC258A54580024D175 /* StreamaxiaSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DC89A7258A53BB0024D175 /* StreamaxiaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				74DC89AC258A54580024D175 /* StreamaxiaSDK.xcframework in CopyFiles */,
+				74CE2D0D27884375003A1602 /* StreamaxiaSDK.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +201,6 @@
 				TargetAttributes = {
 					3EBD240E1D928CD900785BAF = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = WZYAY65GLB;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -374,7 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = WZYAY65GLB;
+				DEVELOPMENT_TEAM = 32MK5V2NGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -398,7 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = WZYAY65GLB;
+				DEVELOPMENT_TEAM = 32MK5V2NGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",

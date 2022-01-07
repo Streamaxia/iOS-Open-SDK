@@ -106,4 +106,5 @@ Add route change recorder state update
 18/08/2021
 Add audio background mode stop session
 
-26/11/2021
+07/01/2022
+Add M1 support
