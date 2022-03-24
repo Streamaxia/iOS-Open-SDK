@@ -108,3 +108,6 @@ Add audio background mode stop session
 
 07/01/2022
 Add M1 support
+
+24/03/2022
+Remove unused calls
