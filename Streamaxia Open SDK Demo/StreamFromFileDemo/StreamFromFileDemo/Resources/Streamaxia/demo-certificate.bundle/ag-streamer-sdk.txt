@@ -5,15 +5,15 @@
 ==================================================
 >>> COMPANY: -------------- [Streamaxia] 
 >>> AUTHOR: --------------- [Streamaxia] 
->>> AUTHOR CONTACT: ------- [http://www.streamaxia.com/] 
+>>> AUTHOR CONTACT: ------- [https://www.streamaxia.com] 
 >>> CLIENT: --------------- [Default] 
 >>> CLIENT CONTACT: ------- [] 
 ==================================================
 ****** SDK Settings ******
 ==================================================
->>> START DATE: --------------------------- [11 August 2021] 
->>> EXPIRATION DATE: ---------------------- [07 May 2024] 
->>> VALID FOR: ---------------------------- [1000] DAYS 
+>>> START DATE: --------------------------- [01 April 2022] 
+>>> EXPIRATION DATE: ---------------------- [01 April 2023] 
+>>> VALID FOR: ---------------------------- [365] DAYS 
 >>> IS LOCKED ON CERTAIN BUNDLE IDs: ------ [YES] 
 >>> HAS LIMITED STREAMING TIME: ------ [NO] 
 ==================================================
