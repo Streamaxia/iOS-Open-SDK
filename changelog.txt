@@ -111,3 +111,6 @@ Add M1 support
 
 24/03/2022
 Remove unused calls
+
+07/04/2022
+Fix simulator compilation
