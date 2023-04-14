@@ -284,4 +284,11 @@ stopped, then the error contains info about the reason of failure.
  */
 - (void)recorder:(AXRecorder *)recorder didUpdateBitrate:(NSUInteger)bitrate;
 
+/**
+ Called when  a rtmp packet is dropped.
+ 
+ @param recorder  The recorder.
+ */
+- (void)recorderDidDropRtmpPacket:(AXRecorder *)recorder;
+
 @end
